@@ -59,6 +59,18 @@ genes_test-web-1      | [] [22] [INFO] Listening at: http://0.0.0.0:8000 (22)
 genes_test-web-1      | [] [22] [INFO] Using worker: sync
 genes_test-web-1      | [] [23] [INFO] Booting worker with pid: 23
 ```
+
+or this if using windows
+```
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2023 - 08:07:33
+Django version 4.2.5, using settings 'genes_test.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+```
 - Test the api endpoint using the following links:
   - [http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1](http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1)
   - [http://127.0.0.1:8000/api/genequery/?gene_symbol=ACE2](http://127.0.0.1:8000/api/genequery/?gene_symbol=ACE2)
