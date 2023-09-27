@@ -15,11 +15,11 @@
   - run the python application
 - Ensure that you allow docker to build the images, create and start all containers before your proceed to the next step. You should see some text similar to the text block below to know the server is up and running.
 ```
-genes_test-web-1      | Starting server
-genes_test-web-1      | [] [22] [INFO] Starting gunicorn 21.2.0
-genes_test-web-1      | [] [22] [INFO] Listening at: http://0.0.0.0:8000 (22)
-genes_test-web-1      | [] [22] [INFO] Using worker: sync
-genes_test-web-1      | [] [23] [INFO] Booting worker with pid: 23
+automatic-octo-doodle-web-1      | Starting server
+automatic-octo-doodle-web-1      | [] [87] [INFO] Starting gunicorn 21.2.0
+automatic-octo-doodle-web-1      | [] [87] [INFO] Listening at: http://0.0.0.0:8000 (87)
+automatic-octo-doodle-web-1      | [] [87] [INFO] Using worker: sync
+automatic-octo-doodle-web-1      | [] [88] [INFO] Booting worker with pid: 88
 ```
 - Test the api endpoint using the following links:
   - [http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1](http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1)
