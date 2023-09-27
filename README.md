@@ -38,16 +38,19 @@ genes_test-web-1      | [] [23] [INFO] Booting worker with pid: 23
 ```pip install virtualenv```
 - Create a virtual environment
 ```virtualenv appenv```
-- Specify which python to be used incase you have python2 and python3
+- Specify which python to be used incase you have python2 and python3 (Skip if using windows)
 ```virtualenv -p /usr/bin/python3 appenv```
 - Activate the virtual environment
 ```source appenv/bin/activate```
+(if using windows powershell ```.\appenv\Scripts\activate.ps1```)
+(if using windows cmd ```.\appenv\Scripts\activate.bat```)
 - Install dependencies of the application
 ```pip install -r requirements.txt```
 - Run the tests using the following command
 ```pytest```
 - Run the server with the following command:
 ```gunicorn genes_test.wsgi:application --bind 0.0.0.0:8000```
+  if you are using windows, the command above will not work, please use ```python manage.py runserver 0.0.0.0:8000```
 - You should see something like the below.
 ```
 genes_test-web-1      | Starting server
