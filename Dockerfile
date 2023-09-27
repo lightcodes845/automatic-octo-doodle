@@ -22,8 +22,7 @@ RUN pip install -r requirements.txt
 # Copy the Django project code into the container
 COPY . /app/
 
-RUN chmod +x /app/wait-for-it.sh
-RUN chmod +x /app/start_server.sh
+RUN chmod +x /app/wait-for-it.sh && chmod +x /app/start_server.sh
 
 # Expose the Django development server port
 EXPOSE 8000
