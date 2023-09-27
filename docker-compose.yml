@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    ports:
+      - "3306:3306"
+    volumes:
+    - mount:/var/lib/mysql
+    - ./init:/docker-entrypoint-initdb.d
+
+  web:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=mysqldb
+    command: ./wait-for-it.sh -t 200 mysqldb:3306 -- ./start_server.sh
+    depends_on:
+      - mysqldb
+
+volumes:
+  mount:
