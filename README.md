@@ -42,7 +42,7 @@ automatic-octo-doodle-web-1      | [] [88] [INFO] Booting worker with pid: 88
 ```virtualenv -p /usr/bin/python3 appenv```
 - Activate the virtual environment
 ```source appenv/bin/activate```
-(if using windows powershell ```.\appenv\Scripts\activate.ps1```)
+(if using windows powershell ```.\appenv\Scripts\activate.ps1```, run ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted``` if you get the execution policy error)
 (if using windows cmd ```.\appenv\Scripts\activate.bat```)
 - Install dependencies of the application
 ```pip install -r requirements.txt```
@@ -53,11 +53,10 @@ automatic-octo-doodle-web-1      | [] [88] [INFO] Booting worker with pid: 88
   if you are using windows, the command above will not work, please use ```python manage.py runserver 0.0.0.0:8000```
 - You should see something like the below.
 ```
-genes_test-web-1      | Starting server
-genes_test-web-1      | [] [22] [INFO] Starting gunicorn 21.2.0
-genes_test-web-1      | [] [22] [INFO] Listening at: http://0.0.0.0:8000 (22)
-genes_test-web-1      | [] [22] [INFO] Using worker: sync
-genes_test-web-1      | [] [23] [INFO] Booting worker with pid: 23
+[] [13200] [INFO] Starting gunicorn 21.2.0
+[] [13200] [INFO] Listening at: http://0.0.0.0:8000 (13200)
+[] [13200] [INFO] Using worker: sync
+[] [13201] [INFO] Booting worker with pid: 13201
 ```
 
 or this if using windows
