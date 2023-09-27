@@ -2,8 +2,8 @@
 
 ## Running the project locally with docker
 
-- Clone the project to your local machine or download the zip file: ```git clone https://github.com/lightcodes845/legendary-octo-doodle.git```
-- Navigate to the project directory: ```cd legendary-octo-doodle```
+- Clone the project to your local machine or download the zip file: ```git clone https://github.com/lightcodes845/automatic-octo-doodle.git```
+- Navigate to the project directory: ```cd automatic-octo-doodle```
 - If you have docker run the following command
 ```docker-compose up```
 - The command above will:
@@ -25,15 +25,15 @@ genes_test-web-1      | [] [23] [INFO] Booting worker with pid: 23
   - [http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1](http://127.0.0.1:8000/api/genequery/?gene_symbol=JAG1)
   - [http://127.0.0.1:8000/api/genequery/?gene_symbol=ACE2](http://127.0.0.1:8000/api/genequery/?gene_symbol=ACE2)
 - When done testing, to remove all data, containers, volumes, images created by the docker command use the following command:
-```docker-compose down -v --rmi all```
+```docker-compose down -v --rmi local```
 - That's it. Thank you!
 
 ##If you do not have docker use the following steps below you do not need to have mysql db installed as I have created and seeded a database on AWS for the test.
 
 ## Running the project locally without docker
 
-- Clone the project to your local machine or download the zip file.
-- Navigate to the project directory: ```cd legendary-octo-doodle```
+- Clone the project to your local machine or download the zip file: ```git clone https://github.com/lightcodes845/automatic-octo-doodle.git```
+- Navigate to the project directory: ```cd automatic-octo-doodle```
 - Install virtualenv
 ```pip install virtualenv```
 - Create a virtual environment
