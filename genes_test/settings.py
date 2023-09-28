@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'genes_test.wsgi.application'
 # use aws host if not running from docker
 if os.environ.get("DB_HOST", None) is None:
     load_dotenv()
-
+# since this is a test assignment, database cred are shown, normally this will be hidden
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
