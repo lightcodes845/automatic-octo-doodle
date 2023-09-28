@@ -20,7 +20,7 @@ class GeneSymbolQuery(APIView):
 
 
         # Query the database for information about the genes with a matching symbol
-        genes = Gene.objects.filter(symbol=gene_symbol)
+        genes = Gene.objects.filter(symbol=gene_symbol).prefetch_related('transcripts')
 
         # Serialize the data
         gene_serializer = GeneSerializer(genes, many=True)
@@ -36,7 +36,7 @@ class GeneSymbolQuery(APIView):
             return Response({"error": "No gene symbol provided"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Query the database for information about the genes with a matching symbol
-        genes = Gene.objects.filter(symbol=gene_symbol)
+        genes = Gene.objects.filter(symbol=gene_symbol).prefetch_related('transcripts')
 
         # Serialize the data
         gene_serializer = GeneSerializer(genes, many=True)
